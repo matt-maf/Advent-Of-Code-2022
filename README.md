@@ -4,7 +4,7 @@ Advent of Code 2022 - Python
 
 - [x] [Day 1](day1)
 - [x] [Day 2](day2)
-- [ ] Day 3
+- [x] [Day 3](day3)
 - [ ] Day 4
 - [ ] Day 5
 - [ ] Day 6
