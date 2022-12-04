@@ -1,0 +1,9 @@
+# Advent of Code 2022 - Day 4
+
+# Single line solutions
+
+# Part 1 - Find total elves that are within the other elves in pairs
+print([1 if(int(elf_pair.strip('\n').split(',')[0].split('-')[0]) >= int(elf_pair.strip('\n').split(',')[1].split('-')[0]) and int(elf_pair.strip('\n').split(',')[0].split('-')[1]) <= int(elf_pair.strip('\n').split(',')[1].split('-')[1])) else 1 if (int(elf_pair.strip('\n').split(',')[0].split('-')[0]) <= int(elf_pair.strip('\n').split(',')[1].split('-')[0]) and int(elf_pair.strip('\n').split(',')[0].split('-')[1]) >= int(elf_pair.strip('\n').split(',')[1].split('-')[1])) else 0 for elf_pair in open("input.txt").readlines()].count(1))
+
+# Part 2 - Find total elves that overlap with the other elves in pairs
+print([1 if(int(elf_pair.strip('\n').split(',')[0].split('-')[0]) >= int(elf_pair.strip('\n').split(',')[1].split('-')[0]) and int(elf_pair.strip('\n').split(',')[0].split('-')[0]) <= int(elf_pair.strip('\n').split(',')[1].split('-')[1])) else 1 if(int(elf_pair.strip('\n').split(',')[0].split('-')[1]) <= int(elf_pair.strip('\n').split(',')[1].split('-')[1]) and int(elf_pair.strip('\n').split(',')[0].split('-')[1]) >= int(elf_pair.strip('\n').split(',')[1].split('-')[0])) else 1 if(int(elf_pair.strip('\n').split(',')[1].split('-')[0]) >= int(elf_pair.strip('\n').split(',')[0].split('-')[0]) and int(elf_pair.strip('\n').split(',')[1].split('-')[0]) <= int(elf_pair.strip('\n').split(',')[0].split('-')[1])) else 1 if(int(elf_pair.strip('\n').split(',')[1].split('-')[1]) <= int(elf_pair.strip('\n').split(',')[0].split('-')[1]) and int(elf_pair.strip('\n').split(',')[1].split('-')[1]) >= int(elf_pair.strip('\n').split(',')[0].split('-')[0])) else 0 for elf_pair in open("input.txt").readlines()].count(1))
